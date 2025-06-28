@@ -25,12 +25,12 @@ jobs:
 
   - name : run CML report 
     env:
-    REPO_TOKEN: ${{secrets.MY_TOKEN}}
+     REPO_TOKEN: ${{secrets.MY_TOKEN}}
     run : |
      echo "#First Line of our report">>report.md
      echo "## Bar plots">>report.md
-     echo"![](.bars/png "bar plot")">>report.md
+     echo"![](./bars.png "bar plot")">>report.md
      echo "## Line plots">>report.md
-     echo"![](.lines/png "line plot")">>report.md
+     echo"![](./lines.png "line plot")">>report.md
 
      cml comment create report.md
