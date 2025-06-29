@@ -28,7 +28,8 @@ jobs:
 
     - name: run CML report 
       env:
-        REPO_TOKEN: ${{secrets.MY_TOKEN}}
+       REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       run: |
         echo "# First Line of our report" >> report.md
         echo "## Bar plots" >> report.md
